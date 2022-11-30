@@ -27,6 +27,6 @@ jobs:
       run: ls -la $GITHUB_WORKSPACE/ && cat $GITHUB_WORKSPACE/settings.xml
       
     - name: Publish to GitHub Packages Apache Maven
-      run: mvn deploy:deploy-file -s $GITHUB_WORKSPACE/settings.xml -DgroupId=com.github.bcgov -DartifactId=bc-wallet -Dclassifier=png -DrepositoryId=github -Dversion=11.0.8-ga -DgeneratePom=false -Dpackaging=png -Dfile=app/src/assets/img/logo-large@3x.png
+      run: mvn deploy:deploy-file -s $GITHUB_WORKSPACE/settings.xml -DgroupId=com.github.bcgov -DartifactId=bc-wallet -Dclassifier=png -DrepositoryId=github -url=https://maven.pkg.github.com/cvarjao/bc-wallet-mobile -Dversion=11.0.8-ga -DgeneratePom=false -Dpackaging=png -Dfile=app/src/assets/img/logo-large@3x.png
       env:
         GITHUB_TOKEN: ${{ github.token }}
